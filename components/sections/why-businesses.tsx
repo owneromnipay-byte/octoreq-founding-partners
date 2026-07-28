@@ -1,59 +1,111 @@
 import Container from "@/components/layouts/container";
+import { Card, CardContent } from "@/components/ui/card";
 import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+  Store,
+  ShoppingBag,
+  Hotel,
+  GraduationCap,
+  Truck,
+  Briefcase,
+} from "lucide-react";
 
-const problems = [
+const businesses = [
   {
-    title: "Too Many Providers",
+    icon: Store,
+    title: "Retail Stores",
     description:
-      "Businesses often rely on multiple payment and commerce providers, creating unnecessary complexity.",
+      "Supermarkets, pharmacies, electronics stores, and other retail businesses that receive customer payments every day.",
   },
   {
-    title: "Fragmented Operations",
+    icon: ShoppingBag,
+    title: "E-commerce Businesses",
     description:
-      "Managing payments, reconciliation, payouts, and commerce tools across different platforms slows growth.",
+      "Online stores looking for a simpler way to access modern payment and commerce services.",
   },
   {
-    title: "Difficult Integrations",
+    icon: Hotel,
+    title: "Restaurants & Hospitality",
     description:
-      "Every new provider means more development work, maintenance, and operational overhead.",
+      "Restaurants, cafés, hotels, and hospitality businesses that serve customers and accept payments regularly.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Schools & Institutions",
+    description:
+      "Educational institutions that collect tuition, application fees, and other payments.",
+  },
+  {
+    icon: Truck,
+    title: "Logistics & Service Businesses",
+    description:
+      "Delivery companies, transport operators, and service providers that receive payments from customers.",
+  },
+  {
+    icon: Briefcase,
+    title: "Professional Businesses",
+    description:
+      "Consultants, agencies, freelancers, healthcare providers, SaaS companies, and other growing businesses.",
   },
 ];
 
 export default function WhyBusinesses() {
   return (
-    <section className="py-24">
+    <section className="border-t border-border py-24">
       <Container>
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-            Why Businesses Need OCTOREQ
+            Businesses You Can Help
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold tracking-tight">
-            Businesses deserve a simpler way to grow.
+          <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+            Who can benefit from OCTOREQ?
           </h2>
 
-          <p className="mt-6 text-lg text-muted-foreground">
-            As a Founding Partner, you'll be looking for businesses that face challenges like these. Understanding these pain points will help you identify merchants who could benefit from OCTOREQ when we launch.
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            As a Founding Partner, you'll help businesses discover OCTOREQ.
+            These are some of the businesses that may benefit from the platform
+            after launch.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {problems.map((problem) => (
-            <Card key={problem.title}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold">
-                  {problem.title}
-                </h3>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {businesses.map((business) => {
+            const Icon = business.icon;
 
-                <p className="mt-4 text-muted-foreground">
-                  {problem.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+            return (
+              <Card
+                key={business.title}
+                className="transition-all duration-300 hover:-translate-y-1 hover:border-primary/30"
+              >
+                <CardContent className="p-8">
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+
+                  <h3 className="text-xl font-semibold">
+                    {business.title}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-muted-foreground">
+                    {business.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        <div className="mx-auto mt-16 max-w-4xl rounded-3xl border border-border bg-card p-8 text-center">
+          <h3 className="text-2xl font-semibold">
+            A merchant is simply any business that receives payments from customers.
+          </h3>
+
+          <p className="mt-4 text-muted-foreground leading-8">
+            If you know businesses like these, you already know potential
+            merchants who may benefit from OCTOREQ after launch. As a Founding
+            Partner, your role is to help introduce eligible businesses to the
+            platform and grow alongside the OCTOREQ ecosystem.
+          </p>
         </div>
       </Container>
     </section>

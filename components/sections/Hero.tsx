@@ -15,11 +15,11 @@ export default function Hero() {
             OCTOREQ.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground">
-            Become one of OCTOREQ's Founding Partners and help businesses
-            discover a simpler way to access modern commerce infrastructure.
-            Apply early, prepare before launch, and be ready to onboard your
-            first merchants when OCTOREQ goes live.
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">
+            OCTOREQ helps businesses accept payments through a single integration.
+            As a Founding Partner, you'll introduce businesses to OCTOREQ before
+            launch and earn recurring commissions when eligible merchants begin
+            using the platform.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -30,6 +30,29 @@ export default function Hero() {
             <button className="rounded-lg border px-6 py-3">
               Learn More
             </button>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-3 text-sm text-muted-foreground">
+            <div>
+              <strong className="block text-black">
+                Introduce Businesses
+              </strong>
+              Help businesses discover OCTOREQ.
+            </div>
+
+            <div>
+              <strong className="block text-black">
+                Prepare Before Launch
+              </strong>
+              Build your merchant network early.
+            </div>
+
+            <div>
+              <strong className="block text-black">
+                Earn Recurring Commissions
+              </strong>
+              Receive commissions as eligible merchants use OCTOREQ.
+            </div>
           </div>
         </div>
       </Container>

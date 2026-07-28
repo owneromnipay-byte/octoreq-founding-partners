@@ -1,68 +1,69 @@
 import Container from "@/components/layouts/container";
 import {
   BookOpen,
-  Rocket,
   Users,
-  BadgeCheck,
+  Rocket,
   Briefcase,
-  ArrowUpRight,
+  GraduationCap,
+  Sparkles,
 } from "lucide-react";
 
 const benefits = [
   {
     icon: BookOpen,
-    title: "Early Learning",
+    title: "Learn Before Everyone Else",
     description:
-      "Gain a strong understanding of OCTOREQ before launch through partner resources and updates.",
+      "Get early educational resources that help you understand OCTOREQ and how it supports businesses before the public launch.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Prepare With Confidence",
+    description:
+      "Understand which businesses may benefit from OCTOREQ so you're ready when onboarding begins.",
   },
   {
     icon: Users,
-    title: "Founding Community",
+    title: "Join the First Community",
     description:
-      "Join an early network of professionals preparing to grow alongside the platform.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Founding Recognition",
-    description:
-      "Be recognized as one of OCTOREQ's earliest partners and help shape the ecosystem from the beginning.",
-  },
-  {
-    icon: Rocket,
-    title: "Launch Readiness",
-    description:
-      "Be prepared to introduce merchants confidently when OCTOREQ officially launches.",
+      "Become part of an early network of professionals who share the vision of helping businesses adopt modern commerce infrastructure.",
   },
   {
     icon: Briefcase,
-    title: "Business Opportunities",
+    title: "Build Relationships Early",
     description:
-      "Identify and build relationships with businesses before launch so you're ready when the platform goes live.",
+      "Use the time before launch to identify businesses in your network that could become future OCTOREQ merchants.",
   },
   {
-    icon: ArrowUpRight,
-    title: "Grow With OCTOREQ",
+    icon: Rocket,
+    title: "Be Ready for Launch",
     description:
-      "As the platform evolves, grow your knowledge, network, and opportunities alongside it.",
+      "When OCTOREQ becomes publicly available, you'll already understand the platform and be prepared for the next stage of the Founding Partner Program.",
+  },
+  {
+    icon: Sparkles,
+    title: "Grow With the Ecosystem",
+    description:
+      "As OCTOREQ expands, you'll continue receiving updates, resources, and opportunities designed to help Founding Partners grow alongside the platform.",
   },
 ];
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="py-24">
+    <section id="benefits" className="border-t border-border py-24">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-            Why Join Early?
+            Why Join the Waitlist?
           </span>
 
           <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-            Benefits of Becoming a Founding Partner
+            Why Join Before Launch?
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Joining before launch gives you the opportunity to learn, prepare,
-            and position yourself to make the most of OCTOREQ from day one.
+            Joining the Founding Partner Waitlist gives you early access to
+            information, preparation, and opportunities before OCTOREQ officially
+            launches.
           </p>
         </div>
 
@@ -73,17 +74,17 @@ export default function Benefits() {
             return (
               <div
                 key={benefit.title}
-                className="rounded-2xl border border-border p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border">
-                  <Icon className="h-6 w-6" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+                  <Icon className="h-7 w-7 text-primary" />
                 </div>
 
                 <h3 className="mt-6 text-xl font-semibold">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-muted-foreground">
+                <p className="mt-4 leading-7 text-muted-foreground">
                   {benefit.description}
                 </p>
               </div>

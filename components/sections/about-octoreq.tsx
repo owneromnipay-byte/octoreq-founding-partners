@@ -15,14 +15,21 @@ export default function AboutOctoreq() {
           <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
             One Platform.
             <br />
-            Modern Commerce Infrastructure.
+            Smarter Business Payments.
           </h2>
 
           <p className="mt-8 text-lg leading-8 text-muted-foreground">
-            OCTOREQ is a unified commerce infrastructure platform that helps
-            businesses access payment and commerce services through a single
-            integration. Instead of managing multiple providers and fragmented
-            tools, businesses can connect once and scale with confidence.
+            OCTOREQ helps businesses accept payments more easily. Instead of
+            integrating different payment providers and commerce tools one by
+            one, businesses connect to OCTOREQ once and gain access to the
+            services they need through a single platform.
+          </p>
+
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            Whether it's an online store, school, hotel, logistics company,
+            restaurant, or any business that receives payments from customers,
+            OCTOREQ is built to make modern commerce simpler, faster, and more
+            reliable.
           </p>
         </div>
       </Container>
